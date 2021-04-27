@@ -37,6 +37,7 @@ export default function Home() {
               return (
                 <li key={p.id}>
                   <div style={{ display: "flex", alignItems: "center" }}>
+                    <img src={p.sprite} />
                     <span>{p.name}</span>
                     <span>
                       {p.types.map((t) => (
