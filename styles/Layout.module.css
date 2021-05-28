@@ -1,0 +1,40 @@
+.app {
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1rem 0.5rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand h1 {
+    margin-right: 1rem;
+}
+
+.nav {
+}
+
+.nav a {
+    margin-right: 1rem;
+}
+
+.main {
+    padding: 0.5rem;
+}
+
+.footer {
+    width: 100%;
+    border-top: 1px solid #eaeaea;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,35 +1,65 @@
 .card {
-  margin: 1rem;
-  flex-basis: 25%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+    flex-basis: 15%;
+    min-width: 150px;
+    padding: 0.75rem 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: border-color 300ms ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
 .card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.card:focus {
+    color: #0070f3;
+    border-color: #0070f3;
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.card:focus .sprite,
+.card:hover .sprite {
+    animation: hop 300ms infinite;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.name {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    margin-bottom: 0.25rem;
+}
+
+.type {
+    margin-right: 0.25rem
+}
+
+@keyframes hop {
+    0%,
+    100% {
+        animation-timing-function: linear;
+        transform: translateY(3px);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
 
 @media (max-width: 600px) {
-  .card {
-    flex-basis: 100%;
-  }
+    .card {
+        padding: 0 0.5rem 0 0;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-basis: 100%;
+    }
+    .figure {
+        flex-direction: row;
+    }
 }

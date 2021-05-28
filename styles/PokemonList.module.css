@@ -1,0 +1,8 @@
+.pokemonCards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    padding-inline-start: 0;
+}
