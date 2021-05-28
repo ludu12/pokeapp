@@ -1,19 +1,19 @@
-import Link from "next/link";
-import {useRouter} from "next/router";
-import React from "react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React from 'react';
 
 export const NavLink = (props) => {
-    const {href, text } = props;
-    const router = useRouter();
+  const { href, text } = props;
+  const router = useRouter();
 
-    // /page/path => ["", "page", "path"]
-    const paths = router.asPath.split('/').map(decodeURI);
-    const root = paths.slice(0, 2).join('/');
-    const isActive = href === root;
+  // /page/path => ["", "page", "path"]
+  const paths = router.asPath.split('/').map(decodeURI);
+  const root = paths.slice(0, 2).join('/');
+  const isActive = href === root;
 
-    return (
-        <Link href={href} passHref>
-            <a className={isActive ? 'active' : ''}>{text}</a>
-        </Link>
-    )
-}
+  return (
+    <Link href={href} passHref>
+      <a className={isActive ? 'active' : ''}>{text}</a>
+    </Link>
+  );
+};

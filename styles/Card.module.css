@@ -1,65 +1,65 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0.5rem;
-    flex-basis: 15%;
-    min-width: 150px;
-    padding: 0.75rem 0.5rem;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    transition: border-color 300ms ease;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+  flex-basis: 15%;
+  min-width: 150px;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: border-color 300ms ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
 }
 
 .card:hover,
 .card:focus {
-    color: #0070f3;
-    border-color: #0070f3;
+  color: #0070f3;
+  border-color: #0070f3;
 }
 
 .card:focus .sprite,
 .card:hover .sprite {
-    animation: hop 300ms infinite;
+  animation: hop 300ms infinite;
 }
 
 .figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .name {
-    font-size: 1.25rem;
-    text-transform: capitalize;
-    margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  margin-bottom: 0.25rem;
 }
 
 .type {
-    margin-right: 0.25rem
+  margin-right: 0.25rem;
 }
 
 @keyframes hop {
-    0%,
-    100% {
-        animation-timing-function: linear;
-        transform: translateY(3px);
-    }
-    50% {
-        transform: translateY(-3px);
-    }
+  0%,
+  100% {
+    animation-timing-function: linear;
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
-
 @media (max-width: 600px) {
-    .card {
-        padding: 0 0.5rem 0 0;
-        justify-content: space-between;
-        flex-direction: row;
-        flex-basis: 100%;
-    }
-    .figure {
-        flex-direction: row;
-    }
+  .card {
+    padding: 0 0.5rem 0 0;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-basis: 100%;
+  }
+
+  .figure {
+    flex-direction: row;
+  }
 }
