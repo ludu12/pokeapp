@@ -96,8 +96,4 @@
     flex-direction: row;
     flex-basis: 100%;
   }
-
-  .figure {
-    flex-direction: row;
-  }
 }

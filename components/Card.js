@@ -27,7 +27,7 @@ CheckMark.propTypes = {
 };
 
 export const Card = (props) => {
-  const { pokemon, onClick, isSelected, isSmall } = props;
+  const { pokemon, onClick, onKeyDown, isSelected, isSmall } = props;
 
   const spriteHeight = isSmall ? 48 : 96;
 
@@ -41,8 +41,11 @@ export const Card = (props) => {
 
   return (
     <div
+      tabIndex={0}
+      role={'button'}
       className={`${classes.card} ${classes.focusable} ${isSmall ? classes.smallCard : ''}`}
       style={{ backgroundColor: colorToRGBA(pokemon.color, 0.3) }}
+      onKeyDown={onKeyDown}
       onClick={onClick}>
       {isSelected && <CheckMark isSmall={isSmall} />}
       <Sprite pokemon={pokemon} height={spriteHeight} />
@@ -62,6 +65,7 @@ export const Card = (props) => {
 Card.propTypes = {
   pokemon: PropTypes.object,
   onClick: PropTypes.func,
+  onKeyDown: PropTypes.func,
   isSelected: PropTypes.bool,
   isSmall: PropTypes.bool
 };

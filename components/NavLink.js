@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 export const NavLink = (props) => {
@@ -16,4 +17,9 @@ export const NavLink = (props) => {
       <a className={isActive ? 'active' : ''}>{text}</a>
     </Link>
   );
+};
+
+NavLink.propTypes = {
+  href: PropTypes.string,
+  text: PropTypes.string
 };

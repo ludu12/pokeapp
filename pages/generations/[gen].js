@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Card } from '../../components/Card';
 import { Layout } from '../../components/Layout';
@@ -20,3 +21,8 @@ export default function Gen(props) {
     </Layout>
   );
 }
+
+Gen.propTypes = {
+  pokemon: PropTypes.array,
+  gen: PropTypes.number
+};

@@ -22,6 +22,10 @@ a.active {
   color: #0070f3;
 }
 
+.error {
+  color: #f30a00;
+}
+
 * {
   box-sizing: border-box;
 }

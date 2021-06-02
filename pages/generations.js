@@ -50,7 +50,7 @@ export default function Generations() {
                 setGeneration(e.target.value);
               }}>
               {generations.map((g) => (
-                <option key={generation.id} value={generation.id}>
+                <option key={g.id} value={g.id}>
                   {g.id}
                 </option>
               ))}

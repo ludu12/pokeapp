@@ -1,29 +1,29 @@
-import axios from "axios";
-import React from "react";
-import { Card } from "../components/Card";
-import { Layout } from "../components/Layout";
-import { PokemonCards } from "../components/PokemonCards";
-import { fetchPokemon } from "../lib/pokeapi/fetch-pokemon";
+import axios from 'axios';
+import React from 'react';
+import { Card } from '../components/Card';
+import { Layout } from '../components/Layout';
+import { PokemonCards } from '../components/PokemonCards';
 
-
-export default function MyDeck(props) {
+export default function MyDeck() {
   const [name, setName] = React.useState(null);
   const [deck, setDeck] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
 
   React.useEffect(() => {
     setLoading(true);
-    axios.get("/api/deck").then((x) => {
-      setName(x.data.name);
-      setDeck(x.data.deck);
-    }).finally(() => {
-      setLoading(false);
-    });
+    axios
+      .get('/api/deck')
+      .then((x) => {
+        setName(x.data.name);
+        setDeck(x.data.deck);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   return (
     <Layout title={`My Deck`}>
-
       {loading ? (
         <h1>Loading...</h1>
       ) : (

@@ -1,5 +1,6 @@
-import Head from 'next/head';
 import React from 'react';
+import PropTypes from 'prop-types';
+import Head from 'next/head';
 import classes from '../styles/Layout.module.css';
 import { NavLink } from './NavLink';
 
@@ -37,4 +38,9 @@ export const Layout = (props) => {
       </div>
     </>
   );
+};
+
+Layout.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node
 };

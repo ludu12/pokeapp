@@ -25,6 +25,7 @@ export const Sprite = (props) => {
   return (
     <div className={`${rest.onClick ? classes.focusable : ''}`} style={{ fontSize: 0 }}>
       <img
+        title={pokemon.name}
         className={classes.sprite}
         height={height}
         width={height}

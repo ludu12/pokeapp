@@ -39,9 +39,19 @@
   color: #0070f3;
 }
 
-.deckContainer form {
-  display: flex;
+.deckForm {
+  text-align: center;
   margin: 2rem 1rem 0 1rem;
+  min-height: 3rem;
+}
+
+.deckForm button,
+.deckForm label {
+  margin: 0.25rem;
+}
+
+.deckForm input {
+  width: 15rem;
 }
 
 .deck {
@@ -60,4 +70,18 @@
   z-index: 100;
   display: flex;
   flex-direction: row;
+}
+
+.floatingDeck h4 {
+  position: absolute;
+  left: 0.5rem;
+  top: -0.5rem;
+  background-color: white;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .deckForm {
+    min-height: 5rem;
+  }
 }

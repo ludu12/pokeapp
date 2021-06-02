@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Card } from '../components/Card';
+import { ClearAction, DownloadAction } from '../components/DeckActions';
 import { DeckForm } from '../components/DeckForm';
 import { Layout } from '../components/Layout';
 import { PokemonCards } from '../components/PokemonCards';
@@ -20,36 +22,10 @@ export default function Home({ pokemon }) {
     <Layout title={'Home'}>
       <section id="deck" className={classes.deckContainer}>
         <h2 ref={ref}>Deck</h2>
-        <DeckForm fetchDeck={fetchDeck}/>
+        <DeckForm className={classes.deckForm} fetchDeck={fetchDeck} />
         <div className={classes.actions}>
-          <button title={'Download'} onClick={downloadDeck} >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-              />
-            </svg>
-          </button>
-          <button title={'Clear'} onClick={clearDeck}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </button>
+          <DownloadAction onClick={downloadDeck} />
+          <ClearAction onClick={clearDeck} />
         </div>
         <div className={classes.deck}>
           <PokemonCards>
@@ -64,6 +40,7 @@ export default function Home({ pokemon }) {
           <Card
             key={p.id}
             pokemon={p}
+            onKeyDown={toggleHandler(p)}
             onClick={toggleHandler(p)}
             isSmall
             isSelected={isSelected(p)}
@@ -72,6 +49,7 @@ export default function Home({ pokemon }) {
       </PokemonCards>
       {!isDeckOnScreen && (
         <div className={classes.floatingDeck}>
+          <h4>Deck</h4>
           {deck?.map((p, i) => (
             <Sprite key={p?.id || `index${i}`} pokemon={p} height={46} onClick={toggleHandler(p)} />
           ))}
@@ -80,3 +58,7 @@ export default function Home({ pokemon }) {
     </Layout>
   );
 }
+
+Home.propTypes = {
+  pokemon: PropTypes.array
+};
