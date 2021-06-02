@@ -1,0 +1,94 @@
+{
+  "deck": [
+    {
+      "id": 4,
+      "genId": 1,
+      "name": "charmander",
+      "color": "red",
+      "types": [
+        {
+          "name": "fire",
+          "typeBadgeUrl": "https://veekun.com/dex/media/types/en/fire.png"
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+    },
+    {
+      "id": 25,
+      "genId": 1,
+      "name": "pikachu",
+      "color": "yellow",
+      "types": [
+        {
+          "name": "electric",
+          "typeBadgeUrl": "https://veekun.com/dex/media/types/en/electric.png"
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+    },
+    {
+      "id": 143,
+      "genId": 1,
+      "name": "snorlax",
+      "color": "black",
+      "types": [
+        {
+          "name": "normal",
+          "typeBadgeUrl": "https://veekun.com/dex/media/types/en/normal.png"
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png"
+    },
+    {
+      "id": 122,
+      "genId": 1,
+      "name": "mr-mime",
+      "color": "pink",
+      "types": [
+        {
+          "name": "psychic",
+          "typeBadgeUrl": "https://veekun.com/dex/media/types/en/psychic.png"
+        },
+        {
+          "name": "fairy",
+          "typeBadgeUrl": "https://veekun.com/dex/media/types/en/fairy.png"
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png"
+    },
+    {
+      "id": 142,
+      "genId": 1,
+      "name": "aerodactyl",
+      "color": "purple",
+      "types": [
+        {
+          "name": "rock",
+          "typeBadgeUrl": "https://veekun.com/dex/media/types/en/rock.png"
+        },
+        {
+          "name": "flying",
+          "typeBadgeUrl": "https://veekun.com/dex/media/types/en/flying.png"
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png"
+    },
+    {
+      "id": 123,
+      "genId": 1,
+      "name": "scyther",
+      "color": "green",
+      "types": [
+        {
+          "name": "bug",
+          "typeBadgeUrl": "https://veekun.com/dex/media/types/en/bug.png"
+        },
+        {
+          "name": "flying",
+          "typeBadgeUrl": "https://veekun.com/dex/media/types/en/flying.png"
+        }
+      ],
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png"
+    }
+  ]
+}

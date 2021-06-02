@@ -3,7 +3,6 @@ import { Card } from '../../components/Card';
 import { Layout } from '../../components/Layout';
 import { PokemonCards } from '../../components/PokemonCards';
 import { getStaticGenerations, getStaticPokemon } from '../../lib/utils/static-utils';
-import styles from '../../styles/Home.module.css';
 
 export const getStaticPaths = getStaticGenerations;
 export const getStaticProps = getStaticPokemon();

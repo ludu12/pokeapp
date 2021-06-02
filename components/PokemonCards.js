@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../styles/PokemonList.module.css';
+import classes from '../styles/Pokemon.module.css';
 
 export const PokemonCards = (props) => {
   const { children } = props;

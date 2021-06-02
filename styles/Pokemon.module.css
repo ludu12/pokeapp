@@ -1,5 +1,15 @@
+.pokemonCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  padding-inline-start: 0;
+}
+
 .card {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   margin: 0.5rem;
@@ -10,34 +20,62 @@
   border-radius: 10px;
   transition: border-color 300ms ease;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  cursor: pointer;
 }
 
-.card:hover,
-.card:focus {
-  color: #0070f3;
-  border-color: #0070f3;
+.smallCard {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.25rem;
 }
 
-.card:focus .sprite,
-.card:hover .sprite {
-  animation: hop 300ms infinite;
-}
-
-.figure {
+.info {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.smallInfo {
+  align-items: flex-end;
+  font-size: 0.9rem;
+}
+
+.focusable {
+  cursor: pointer;
+}
+
+.focusable:hover,
+.focusable:focus {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.focusable:focus .sprite,
+.focusable:hover .sprite {
+  animation: hop 300ms infinite;
+}
+
+.empty {
+  background-color: grey;
+  justify-content: center;
+}
+
+.checkmark {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  color: #0070f3;
+}
+
 .name {
-  font-size: 1.25rem;
   text-transform: capitalize;
   margin-bottom: 0.25rem;
 }
 
-.type {
-  margin-right: 0.25rem;
+.types {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @keyframes hop {

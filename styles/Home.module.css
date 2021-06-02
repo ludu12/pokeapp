@@ -1,0 +1,63 @@
+.deckContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  position: relative;
+}
+
+.deckContainer h2 {
+  position: absolute;
+  left: 1rem;
+  top: -1rem;
+  background-color: white;
+  margin: 0;
+}
+
+.actions {
+  background-color: white;
+  position: absolute;
+  right: 1rem;
+  top: -1rem;
+}
+
+.actions button {
+  border-radius: 50%;
+  border: none;
+  margin: 0.25rem;
+  background-color: transparent;
+  cursor: pointer;
+  height: 2.25rem;
+  width: 2.25rem;
+  transition: 300ms ease;
+}
+
+.actions button:hover {
+  color: #0070f3;
+}
+
+.deckContainer form {
+  display: flex;
+  margin: 2rem 1rem 0 1rem;
+}
+
+.deck {
+  min-height: 14rem;
+  display: flex;
+}
+
+.floatingDeck {
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 1rem;
+  right: 0.5rem;
+  border: 1px solid #eaeaea;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+}

@@ -41,19 +41,21 @@ export default function Generations() {
         <h1>Loading...</h1>
       ) : (
         <>
-          <label htmlFor="generation">Generation</label>
-          <select
-            id="generation"
-            value={generation}
-            onChange={(e) => {
-              setGeneration(e.target.value);
-            }}>
-            {generations.map((g) => (
-              <option key={generation.id} value={generation.id}>
-                {g.id}
-              </option>
-            ))}
-          </select>
+          <label>
+            Generation: &nbsp;
+            <select
+              id="generation"
+              value={generation}
+              onChange={(e) => {
+                setGeneration(e.target.value);
+              }}>
+              {generations.map((g) => (
+                <option key={generation.id} value={generation.id}>
+                  {g.id}
+                </option>
+              ))}
+            </select>
+          </label>
           <PokemonCards>
             {pokemon?.map((p) => (
               <Card key={p.id} pokemon={p} />
