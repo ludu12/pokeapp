@@ -3,11 +3,12 @@ import React from 'react';
 import classes from '../styles/Pokemon.module.css';
 
 export const Sprite = (props) => {
-  const { pokemon, height, ...rest } = props;
+  const { pokemon, height, isLoading, ...rest } = props;
 
   if (!pokemon) {
     return (
       <svg
+        className={isLoading ? classes.loading : ''}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
@@ -39,5 +40,6 @@ export const Sprite = (props) => {
 
 Sprite.propTypes = {
   pokemon: PropTypes.object,
-  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  isLoading: PropTypes.bool
 };

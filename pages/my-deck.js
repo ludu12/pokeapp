@@ -1,42 +1,33 @@
-import axios from 'axios';
 import React from 'react';
 import { Card } from '../components/Card';
 import { Layout } from '../components/Layout';
 import { PokemonCards } from '../components/PokemonCards';
+import { useDeck } from '../lib/use-deck';
 
 export default function MyDeck() {
-  const [name, setName] = React.useState(null);
-  const [deck, setDeck] = React.useState(null);
-  const [loading, setLoading] = React.useState(false);
+  const { deck, name, fetchDeck } = useDeck();
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [error, setError] = React.useState(null);
 
   React.useEffect(() => {
-    setLoading(true);
-    axios
-      .get('/api/deck')
-      .then((x) => {
-        setName(x.data.name);
-        setDeck(x.data.deck);
-      })
+    setIsLoading(true);
+    fetchDeck('/api/deck')
+      .then((e) => setError(e?.message))
       .finally(() => {
-        setLoading(false);
+        setIsLoading(false);
       });
   }, []);
 
   return (
     <Layout title={`My Deck`}>
-      {loading ? (
-        <h1>Loading...</h1>
-      ) : (
-        <>
-          <p>Here is my deck as fetched from my server:</p>
-          <h3>{name}</h3>
-          <PokemonCards>
-            {deck?.map((p) => (
-              <Card key={p.id} pokemon={p} />
-            ))}
-          </PokemonCards>
-        </>
-      )}
+      <p>Here is my deck as fetched from my server:</p>
+      <span className={'error'}>{error}</span>
+      <h3>{name}</h3>
+      <PokemonCards>
+        {deck?.map((p, i) => (
+          <Card key={p?.id || `index${i}`} pokemon={p} isLoading={isLoading} />
+        ))}
+      </PokemonCards>
     </Layout>
   );
 }

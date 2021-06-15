@@ -3,16 +3,16 @@ import React from 'react';
 import { Card } from '../../components/Card';
 import { Layout } from '../../components/Layout';
 import { PokemonCards } from '../../components/PokemonCards';
-import { getStaticGenerations, getStaticPokemon } from '../../lib/utils/static-utils';
+import { getStaticGenerations, getStaticPokemonByGen } from '../../lib/utils/static-utils';
 
 export const getStaticPaths = getStaticGenerations;
-export const getStaticProps = getStaticPokemon();
+export const getStaticProps = getStaticPokemonByGen();
 
 export default function Gen(props) {
-  const { pokemon, gen } = props;
+  const { pokemon, generation } = props;
 
   return (
-    <Layout title={`Generation: ${gen}`}>
+    <Layout title={`Generation: ${generation}`}>
       <PokemonCards>
         {pokemon?.map((p) => (
           <Card key={p.id} pokemon={p} />
@@ -24,5 +24,5 @@ export default function Gen(props) {
 
 Gen.propTypes = {
   pokemon: PropTypes.array,
-  gen: PropTypes.number
+  generation: PropTypes.number
 };

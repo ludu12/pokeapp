@@ -59,6 +59,10 @@
   justify-content: center;
 }
 
+.loading {
+  animation: spin 1s linear infinite;
+}
+
 .checkmark {
   position: absolute;
   top: -0.5rem;
@@ -86,6 +90,15 @@
   }
   50% {
     transform: translateY(-3px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 

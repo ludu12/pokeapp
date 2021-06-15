@@ -27,8 +27,8 @@ export const Layout = (props) => {
           </div>
           <nav className={classes.nav}>
             <NavLink href="/" text={'Home'} />
-            <NavLink href="/generations" text={'Generations'} />
             <NavLink href="/my-deck" text={'My Deck'} />
+            <NavLink href="/generations" text={'Generations'} />
           </nav>
         </header>
         <main className={classes.main}>{children}</main>

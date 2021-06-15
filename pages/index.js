@@ -1,20 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Card } from '../components/Card';
-import { ClearAction, DownloadAction } from '../components/DeckActions';
+import { ClearAction, DownloadAction, RandomizeAction } from '../components/DeckActions';
 import { DeckForm } from '../components/DeckForm';
 import { Layout } from '../components/Layout';
 import { PokemonCards } from '../components/PokemonCards';
 import { Sprite } from '../components/Sprite';
 import { useDeck } from '../lib/use-deck';
 import { useOnScreen } from '../lib/use-on-screen';
-import { getStaticPokemon } from '../lib/utils/static-utils';
+import { getStaticPokemonByGen } from '../lib/utils/static-utils';
 import classes from '../styles/Home.module.css';
 
-export const getStaticProps = getStaticPokemon(1);
+export const getStaticProps = getStaticPokemonByGen(1);
 
 export default function Home({ pokemon }) {
-  const { deck, clearDeck, downloadDeck, fetchDeck, toggleHandler, isSelected } = useDeck();
+  const { deck, clearDeck, downloadDeck, randomizeDeck, fetchDeck, toggleHandler, isSelected } =
+    useDeck();
   const ref = React.useRef();
   const isDeckOnScreen = useOnScreen(ref);
 
@@ -24,6 +25,7 @@ export default function Home({ pokemon }) {
         <h2 ref={ref}>Deck</h2>
         <DeckForm className={classes.deckForm} fetchDeck={fetchDeck} />
         <div className={classes.actions}>
+          <RandomizeAction onClick={randomizeDeck(pokemon)} />
           <DownloadAction onClick={downloadDeck} />
           <ClearAction onClick={clearDeck} />
         </div>

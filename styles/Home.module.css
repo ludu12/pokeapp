@@ -60,12 +60,13 @@
 }
 
 .floatingDeck {
-  padding: 0.5rem;
+  padding: 1rem 0.5rem 0.5rem;
   background-color: white;
   border-radius: 10px;
   position: fixed;
   bottom: 1rem;
   right: 0.5rem;
+  box-sizing: border-box;
   border: 1px solid #eaeaea;
   z-index: 100;
   display: flex;
@@ -74,9 +75,8 @@
 
 .floatingDeck h4 {
   position: absolute;
-  left: 0.5rem;
-  top: -0.5rem;
-  background-color: white;
+  left: 0.75rem;
+  top: 0;
   margin: 0;
 }
 

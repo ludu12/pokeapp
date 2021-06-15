@@ -27,14 +27,14 @@ CheckMark.propTypes = {
 };
 
 export const Card = (props) => {
-  const { pokemon, onClick, onKeyDown, isSelected, isSmall } = props;
+  const { pokemon, onClick, onKeyDown, isSelected, isLoading, isSmall } = props;
 
   const spriteHeight = isSmall ? 48 : 96;
 
   if (!pokemon) {
     return (
       <div className={`${classes.card} ${classes.empty}`}>
-        <Sprite height={spriteHeight} />
+        <Sprite height={spriteHeight} isLoading={isLoading} />
       </div>
     );
   }
@@ -67,5 +67,6 @@ Card.propTypes = {
   onClick: PropTypes.func,
   onKeyDown: PropTypes.func,
   isSelected: PropTypes.bool,
+  isLoading: PropTypes.bool,
   isSmall: PropTypes.bool
 };
