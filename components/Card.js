@@ -52,10 +52,9 @@ export const Card = (props) => {
       <div className={`${classes.info} ${isSmall ? classes.smallInfo : ''}`}>
         <div className={classes.name}>{pokemon.name}</div>
         <div className={classes.types}>
-          {pokemon.types
-            .map((t) => <img key={t.name} src={t.typeBadgeUrl} alt={'type'} />)
-            .reverse()}
-          {/*  small hack here inorder to get primary type first, using row reverse for style in order to preserve flex-end + space-between*/}
+          {pokemon.types.map((t) => (
+            <img key={t.name} src={t.typeBadgeUrl} alt={'type'} style={{ padding: '1px' }} />
+          ))}
         </div>
       </div>
     </div>

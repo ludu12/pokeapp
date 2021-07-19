@@ -22,14 +22,14 @@ export default function Home({ pokemon }) {
   return (
     <Layout title={'Home'}>
       <section id="deck" className={classes.deckContainer}>
-        <h2 ref={ref}>Deck</h2>
-        <DeckForm className={classes.deckForm} fetchDeck={fetchDeck} />
+        <h2>Deck</h2>
         <div className={classes.actions}>
           <RandomizeAction onClick={randomizeDeck(pokemon)} />
           <DownloadAction onClick={downloadDeck} />
           <ClearAction onClick={clearDeck} />
         </div>
-        <div className={classes.deck}>
+        <DeckForm className={classes.deckForm} fetchDeck={fetchDeck} />
+        <div ref={ref} className={classes.deck}>
           <PokemonCards>
             {deck?.map((p, i) => (
               <Card key={p?.id || `index${i}`} pokemon={p} onClick={toggleHandler(p)} isSelected />
