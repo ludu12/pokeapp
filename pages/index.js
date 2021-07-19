@@ -6,8 +6,7 @@ import classes from '../styles/Home.module.css';
 export const getStaticProps = getStaticPokemonByGen(1);
 
 export default function Home({ pokemon }) {
-  // const { deck, clearDeck, downloadDeck, randomizeDeck, fetchDeck, toggleHandler, isSelected } =
-  //   useDeck();
+  // const { deck, clearDeck, downloadDeck, randomizeDeck, fetchDeck, toggleHandler, isSelected } = useDeck();
 
   return (
     <div className={classes.welcome}>
