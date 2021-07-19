@@ -1,13 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Card } from '../components/Card';
-import { ClearAction, DownloadAction, RandomizeAction } from '../components/DeckActions';
-import { DeckForm } from '../components/DeckForm';
-import { Layout } from '../components/Layout';
-import { PokemonCards } from '../components/PokemonCards';
-import { Sprite } from '../components/Sprite';
-import { useDeck } from '../lib/use-deck';
-import { useOnScreen } from '../lib/use-on-screen';
 import { getStaticPokemonByGen } from '../lib/utils/static-utils';
 import classes from '../styles/Home.module.css';
 
