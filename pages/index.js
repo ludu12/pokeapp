@@ -9,10 +9,10 @@ export default function Home({ pokemon }) {
   // const { deck, clearDeck, downloadDeck, randomizeDeck, fetchDeck, toggleHandler, isSelected } = useDeck();
   return (
     <div className={classes.welcome}>
-      <h1>
-        Welcome Tech Camp! 🏕️
-      </h1>
-      <p>Edit <code>pages/index.js</code> to get started!</p>
+      <h1>Welcome Tech Camp! 🏕️</h1>
+      <p>
+        Edit <code>pages/index.js</code> to get started!
+      </p>
     </div>
   );
 }

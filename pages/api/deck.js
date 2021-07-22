@@ -1,9 +1,6 @@
 import db from '../../db/db.json';
 import Cors from 'cors';
 
-// Helper method to wait for a middleware to execute before continuing
-// And to throw an error when an error happens in a middleware
-
 // Initialize the cors middleware
 export const cors = (req, res) =>
   new Promise((resolve, reject) => {
@@ -21,7 +18,7 @@ export default async (req, res) => {
   await cors(req, res);
 
   res.status(200).json({
-    name: "Your Deck!",
+    name: 'Your Deck!',
     deck: db.deck
   });
 };
