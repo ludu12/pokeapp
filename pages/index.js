@@ -22,13 +22,11 @@ export default function Home({ pokemon }) {
     <Layout title={"Home"}>
       <section id="deck" className={classes.deckContainer}>
         <h2>Deck</h2>
-
         <div className={classes.actions}>
           <RandomizeAction onClick={randomizeDeck(pokemon)} />
           <DownloadAction onClick={downloadDeck} />
           <ClearAction onClick={clearDeck} />
         </div>
-
         <DeckForm className={classes.deckForm} fetchDeck={fetchDeck} />
         <div ref={ref} className={classes.deck}>
           {/*Render Deck Cards here*/}
