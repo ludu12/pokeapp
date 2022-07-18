@@ -27,28 +27,76 @@ And React is popular Javascript library.
 
 ## How do software developers (you) create Web Applications?
 
-## Version Control  
-  - Git
-  - [GitHub](https://github.com/)
+## Version Control
 
-## IDEs (Integrated Development Environment)  
-  - VSCode
-  - [GitPod](https://www.gitpod.io/)
+- Git
+- [GitHub](https://github.com/)
 
-## Open Source APIs  
-  - React, Next.js (libraries/frameworks)
-  - [PokeAPI](https://beta.pokeapi.co/graphql/console/)
-  - [SpaceX API](https://api.spacex.land/graphql/)
+## IDEs (Integrated Development Environment)
 
-## Hosting  
-  - AWS
-  - Azure
-  - [Vercel](https://vercel.com/)
+- VSCode
+- [GitPod](https://www.gitpod.io/)
 
-## LET'S GET SETUP!  
+## Open Source APIs
+
+- React, Next.js (libraries/frameworks)
+- [PokeAPI](https://beta.pokeapi.co/graphql/console/)
+- [SpaceX API](https://api.spacex.land/graphql/)
+
+## Hosting
+
+- AWS
+- Azure
+- [Vercel](https://vercel.com/)
+
+## What is react?
+::: {.container}
+:::: {.col}
+
+A javascript library for building user interfaces
+
+<img src="images/react.png" alt="react" width="300"/>
+
+::::
+:::: {.col}
+
+- Declarative (car analogy)
+- Component-Based (legos!)
+- Use with DOM (web), Node (ssr web), React-Native (mobile)
+- JSX (like html!)
+
+::::
+:::
+
+
+## What is Next.js?
+
+::: {.container}
+:::: {.col}
+
+Open source framework for building Web Apps
+
+<img src="images/nextjs.png" alt="nextjs" width="300"/>
+
+::::
+:::: {.col}
+
+- Server-side rendering
+- Bundling (Babel/webpack)
+- Static generation
+- Serverless APIs
+- Routes
+
+::::
+:::
+
+
+## LET'S GET SETUP!
+
 <img src="images/dwight-lets-do-this.gif" alt="lets do this" width="300"/>
 
 ## Github
+
 ::: {.container}
 :::: {.col}
 
@@ -64,8 +112,8 @@ And React is popular Javascript library.
 ::::
 :::
 
+## Gitpod
 
-## Gitpod  
 ::: {.container}
 :::: {.col}
 
@@ -83,15 +131,16 @@ And React is popular Javascript library.
 :::
 
 ## Gitpod cont...
+
 ::: {.container}
 :::: {.col}
 
 1. Settings -> Integrations
 2. Github -> Edit Permissions
-   1. User:email
-   2. Read:user
-   3. Public_repo
-   4. Repo
+    1. User:email
+    2. Read:user
+    3. Public_repo
+    4. Repo
 
 ::::
 :::: {.col}
@@ -101,14 +150,14 @@ And React is popular Javascript library.
 ::::
 :::
 
-
 ## Vercel
+
 ::: {.container}
 :::: {.col}
 
 1. Go to `https://vercel.com/`
-2. Click Sign Up 
-3. Continue with Github 
+2. Click Sign Up
+3. Continue with Github
 4. Follow OAuth prompt
 
 ::::
@@ -118,6 +167,10 @@ And React is popular Javascript library.
 
 ::::
 :::
+
+## Break?
+
+
 
 
 <style>
