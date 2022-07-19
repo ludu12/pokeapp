@@ -17,7 +17,7 @@ export default function Home({ pokemon }) {
   const { deck, clearDeck, downloadDeck, randomizeDeck, fetchDeck, toggleHandler, isSelected } =
     useDeck();
   const ref = React.useRef();
-  // const isDeckOnScreen = useOnScreen(ref);
+  const isDeckOnScreen = useOnScreen(ref);
 
   return (
     <Layout title={'Home'}>
@@ -30,19 +30,33 @@ export default function Home({ pokemon }) {
         </div>
         <DeckForm className={classes.deckForm} fetchDeck={fetchDeck} />
         <div ref={ref} className={classes.deck}>
-          {/*Render Deck Cards here*/}
+          <PokemonCards>
+            {deck?.map((p, i) => (
+              <Card key={p?.id || `index${i}`} pokemon={p} onClick={toggleHandler(p)} isSelected />
+            ))}
+          </PokemonCards>
         </div>
       </section>
-
-      {/*Show the rest of the pokemon!*/}
-
-      {/*Can we only show this if we need to ?*/}
-      <div className={classes.floatingDeck}>
-        <h4>Deck</h4>
-        {deck?.map((p, i) => (
-          <Sprite key={p?.id || `index${i}`} pokemon={p} height={46} onClick={toggleHandler(p)} />
+      <PokemonCards>
+        {pokemon?.map((p) => (
+          <Card
+            key={p.id}
+            pokemon={p}
+            onKeyDown={toggleHandler(p)}
+            onClick={toggleHandler(p)}
+            isSmall
+            isSelected={isSelected(p)}
+          />
         ))}
-      </div>
+      </PokemonCards>
+      {!isDeckOnScreen && (
+        <div className={classes.floatingDeck}>
+          <h4>Deck</h4>
+          {deck?.map((p, i) => (
+            <Sprite key={p?.id || `index${i}`} pokemon={p} height={46} onClick={toggleHandler(p)} />
+          ))}
+        </div>
+      )}
     </Layout>
   );
 }

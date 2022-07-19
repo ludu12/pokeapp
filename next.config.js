@@ -4,4 +4,4 @@ module.exports = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true
   }
-}
+};

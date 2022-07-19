@@ -50,6 +50,7 @@ And React is popular Javascript library.
 - [Vercel](https://vercel.com/)
 
 ## What is react?
+
 ::: {.container}
 :::: {.col}
 
@@ -67,7 +68,6 @@ A javascript library for building user interfaces
 
 ::::
 :::
-
 
 ## What is Next.js?
 
@@ -89,7 +89,6 @@ Open source framework for building Web Apps
 
 ::::
 :::
-
 
 ## LET'S GET SETUP!
 
@@ -137,10 +136,10 @@ Open source framework for building Web Apps
 
 1. Settings -> Integrations
 2. Github -> Edit Permissions
-    1. User:email
-    2. Read:user
-    3. Public_repo
-    4. Repo
+   1. User:email
+   2. Read:user
+   3. Public_repo
+   4. Repo
 
 ::::
 :::: {.col}
@@ -169,9 +168,6 @@ Open source framework for building Web Apps
 :::
 
 ## Break?
-
-
-
 
 <style>
 .container{

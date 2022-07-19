@@ -5,6 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "slides": "./slides.sh",
     "test": "jest --watch",
     "lint": "eslint --fix . --ignore-path ./.gitignore",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc --ignore-path ./.gitignore"
