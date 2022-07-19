@@ -14,6 +14,10 @@ import classes from '../styles/Home.module.css';
 export const getStaticProps = getStaticPokemonByGen(1);
 
 export default function Home({ pokemon }) {
+  return (
+    <div>Hello! My name is Luke</div>
+  )
+
   const { deck, clearDeck, downloadDeck, randomizeDeck, fetchDeck, toggleHandler, isSelected } =
     useDeck();
   const ref = React.useRef();
@@ -23,21 +27,29 @@ export default function Home({ pokemon }) {
     <Layout title={'Home'}>
       <section id="deck" className={classes.deckContainer}>
         <h2>Deck</h2>
-        <div className={classes.actions}>
+
+        {/* It would be cool to have some actions here... */}
+        {/* <div className={classes.actions}>
           <RandomizeAction onClick={randomizeDeck(pokemon)} />
           <DownloadAction onClick={downloadDeck} />
           <ClearAction onClick={clearDeck} />
-        </div>
-        <DeckForm className={classes.deckForm} fetchDeck={fetchDeck} />
+        </div> */}
+
+        {/* This is a cool feature for loading a friends deck! */}
+        {/* <DeckForm className={classes.deckForm} fetchDeck={fetchDeck} /> */}
+
         <div ref={ref} className={classes.deck}>
-          <PokemonCards>
+          {/* Where are my cards? */}
+          {/* <PokemonCards>
             {deck?.map((p, i) => (
               <Card key={p?.id || `index${i}`} pokemon={p} onClick={toggleHandler(p)} isSelected />
             ))}
-          </PokemonCards>
+          </PokemonCards> */}
         </div>
       </section>
-      <PokemonCards>
+
+      {/* Show me some pokemon cards! */}
+      {/* <PokemonCards>
         {pokemon?.map((p) => (
           <Card
             key={p.id}
@@ -48,15 +60,17 @@ export default function Home({ pokemon }) {
             isSelected={isSelected(p)}
           />
         ))}
-      </PokemonCards>
-      {!isDeckOnScreen && (
+      </PokemonCards> */}
+
+      {/* This is a cool feature for when you scroll and still want to see your deck! */}
+      {/* {!isDeckOnScreen && (
         <div className={classes.floatingDeck}>
           <h4>Deck</h4>
           {deck?.map((p, i) => (
             <Sprite key={p?.id || `index${i}`} pokemon={p} height={46} onClick={toggleHandler(p)} />
           ))}
         </div>
-      )}
+      )} */}
     </Layout>
   );
 }
