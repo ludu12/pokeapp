@@ -11,7 +11,7 @@ import { useOnScreen } from '../lib/use-on-screen';
 import { getStaticPokemonByGen } from '../lib/utils/static-utils';
 import classes from '../styles/Home.module.css';
 
-export const getStaticProps = getStaticPokemonByGen(1);
+export const getStaticProps = getStaticPokemonByGen([1,2,3,4,5,6,7,8]);
 
 export default function Home({ pokemon }) {
   const { deck, name, clearDeck, downloadDeck, randomizeDeck, fetchDeck, toggleHandler, isSelected } =
