@@ -15,7 +15,7 @@ export const getStaticProps = getStaticPokemonByGen(1);
 
 export default function Home({ pokemon }) {
   return (
-    <div>Hello! My name is Luke</div>
+    <div>Hello! My name is Robert</div>
   )
 
   const { deck, clearDeck, downloadDeck, randomizeDeck, fetchDeck, toggleHandler, isSelected } =
