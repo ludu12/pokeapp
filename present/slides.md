@@ -1,6 +1,6 @@
 # Web App w/ React & Next.js
 
-## Goals
+## Goals 📝
 
 - Javascript + React
 - Frameworks and other abstractions
@@ -136,10 +136,10 @@ Open source framework for building Web Apps
 
 1. Settings -> Integrations
 2. Github -> Edit Permissions
-   1. User:email
-   2. Read:user
-   3. Public_repo
-   4. Repo
+    1. User:email
+    2. Read:user
+    3. Public_repo
+    4. Repo
 
 ::::
 :::: {.col}
@@ -168,6 +168,56 @@ Open source framework for building Web Apps
 :::
 
 ## Break?
+
+## Let's Deploy 🚀
+
+## Let's Deploy 🚀
+
+1. Fork
+
+```
+https://github.com/ludu12/pokeapp
+```
+
+2. Go to Vercel and import the pokeapp repo
+3. Watch it deploy!
+
+## Let's make an update ⚒️
+
+1. Go to (using your github username):
+
+```
+gitpod.io/#https://github.com/{your-username}/pokeapp
+```  
+
+2. Make a change
+3. Commit and push!... watch it deploy
+
+<img src="images/gitpod-popup.png" alt="popup" width="300"/>
+
+
+## More updates!
+
+1. Go to `/pages/index.js`
+2. Bring our home page to life!
+
+## We have broken code! 
+
+<img src="images/kermit-worried.gif" alt="kermit" width="300"/>
+
+
+## Let's fix it
+1. Go to `/lib/use-deck.js`
+2. `toggleHandler` is our problem!
+3. Optional: In terminal run `npm run test`
+
+## Think like a computer (algorithm)
+1. Computers are fast, consistent idiots
+2. For things to work properly, we must think of all use cases
+3. We can also look in our toolbox for abstractions [mdn](developer.mozilla.or)
+
+## Thanks!
+<img src="images/pikachu.png" alt="pikachu"/>
 
 <style>
 .container{
