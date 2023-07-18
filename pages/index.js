@@ -11,18 +11,26 @@ import { useOnScreen } from '../lib/use-on-screen';
 import { getStaticPokemonByGen } from '../lib/utils/static-utils';
 import classes from '../styles/Home.module.css';
 
-export const getStaticProps = getStaticPokemonByGen([1,2,3,4,5,6,7,8]);
+export const getStaticProps = getStaticPokemonByGen([1, 2, 3, 4, 5, 6, 7, 8]);
 
 export default function Home({ pokemon }) {
-  const { deck, name, clearDeck, downloadDeck, randomizeDeck, fetchDeck, toggleHandler, isSelected } =
-    useDeck();
+  const {
+    deck,
+    name,
+    clearDeck,
+    downloadDeck,
+    randomizeDeck,
+    fetchDeck,
+    toggleHandler,
+    isSelected
+  } = useDeck();
   const ref = React.useRef();
   const isDeckOnScreen = useOnScreen(ref);
 
   return (
     <Layout title={'Home'}>
       <section id="deck" className={classes.deckContainer}>
-        <h2>{name ?? "Deck"}</h2>
+        <h2>{name ?? 'Deck'}</h2>
         {/* It would be cool to have some actions here... */}
         <div className={classes.actions}>
           <RandomizeAction onClick={randomizeDeck(pokemon)} />

@@ -18,7 +18,7 @@ export default async (req, res) => {
   await cors(req, res);
 
   res.status(200).json({
-    name: "Luke's cool deck!",
+    name: 'Your deck!',
     deck: db.deck
   });
 };
