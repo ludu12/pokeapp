@@ -134,8 +134,9 @@ Open source framework for building Web Apps
 ::: {.container}
 :::: {.col}
 
-1. Settings -> Integrations
-2. Github -> Edit Permissions
+1. User Settings -> Git Providers
+2. Integrations
+3. Github -> Edit Permissions
     1. User:email
     2. Read:user
     3. Public_repo
