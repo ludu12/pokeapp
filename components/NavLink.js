@@ -13,8 +13,8 @@ export const NavLink = (props) => {
   const isActive = href === root;
 
   return (
-    <Link href={href} passHref>
-      <a className={isActive ? 'active' : ''}>{text}</a>
+    <Link href={href} passHref className={isActive ? 'active' : ''}>
+      {text}
     </Link>
   );
 };
